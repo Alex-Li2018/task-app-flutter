@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter/services.dart';
-import 'package:task_app/pages/home/home.dart';
+import 'package:task_app/pages/home/home_page.dart';
+import 'package:task_app/pages/cherry_pick/cherry_pick_page.dart';
+import 'package:task_app/pages/me/me_page.dart';
 import 'package:task_app/widgets/bottom_nav_bar.dart';
 
 class TaskManageApp extends StatelessWidget {
@@ -14,12 +16,30 @@ class TaskManageApp extends StatelessWidget {
   }
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  App({ Key key}) : super(key: key);
+
+  @override
+  _AppState createState() => _AppState();
+}
+
+class _AppState extends State<App> { 
+  final _widgetItems = [HomePage(), CherryPickPage(), MePage()];
+  int selectedIndex = 0;
+
+  void onItemTapped(val) {
+    setState(() {
+      selectedIndex = val;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: MainPage(),
-      bottomNavigationBar: BottomNavBar()
+      body: Center(
+        child: _widgetItems[selectedIndex]
+      ),
+      bottomNavigationBar: BottomNavBar(selectedIndex: selectedIndex, callback: (val) => onItemTapped(val))
     );
   }
 }
