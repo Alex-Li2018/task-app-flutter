@@ -48,7 +48,8 @@ void main() {
   runApp(TaskManageApp());
   if (Platform.isAndroid) {
     SystemUiOverlayStyle style = SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
+      // statusBarColor: Colors.transparent,
+      statusBarColor: Color.fromARGB(255,225,37,27),
       ///这是设置状态栏的图标和字体的颜色 
       ///Brightness.light  一般都是显示为白色
       ///Brightness.dark 一般都是显示为黑色

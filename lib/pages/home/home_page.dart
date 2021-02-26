@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-
+import "package:task_app/pages/home/widgets/busi_home_top_bar.dart";
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -10,9 +10,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'home'
+    return SafeArea(
+      child: Column(
+        children: <Widget> [
+          BusiHomeTopBar(),
+          Text('底部'),
+        ]
       ),
     );
   }
