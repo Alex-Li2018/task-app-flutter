@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import "package:task_app/pages/home/widgets/busi_home_top_bar.dart";
+import "package:task_app/pages/home/widgets/busi_home_swiper.dart";
+import "package:task_app/pages/home/widgets/busi_home_content.dart";
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -14,7 +16,9 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         children: <Widget> [
           BusiHomeTopBar(),
-          Text('底部'),
+          BusiHomeSwiper(),
+          BusiHomeContent()
+          // Text('hello world')
         ]
       ),
     );
