@@ -17,6 +17,7 @@ class _BusiHomeTopBarState extends State<BusiHomeSwiper> {
       width: window.physicalSize.width,
       height: 143.0,
       constraints: BoxConstraints.tight(Size(window.physicalSize.width, 143.0)),
+      color: Color.fromARGB(255,246,246,246),
       child: Stack(
         alignment: AlignmentDirectional.topCenter,
         children: <Widget>[

@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
           BusiHomeTopBar(),
           BusiHomeSwiper(),
           BusiHomeContent()
-          // Text('hello world')
         ]
       ),
     );

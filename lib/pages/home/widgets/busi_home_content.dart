@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:task_app/pages/home/widgets/busi_home_item.dart";
 
 // 首页内容区域
 class BusiHomeContent extends StatefulWidget {
@@ -8,31 +9,28 @@ class BusiHomeContent extends StatefulWidget {
 }
 
 class _BusiHomeContentState extends State<BusiHomeContent> {
+  List items = List<String>.generate(1000, (i) => "Item $i");
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView(
-        children: <Widget>[
-          ListTile(title: Text('Title1')),
-          ListTile(title: Text('Title2')),
-          ListTile(title: Text('Title3')),
-          ListTile(title: Text('Title4')),
-          ListTile(title: Text('Title5')),
-          ListTile(title: Text('Title6')),
-          ListTile(title: Text('Title7')),
-          ListTile(title: Text('Title8')),
-          ListTile(title: Text('Title9')),
-          ListTile(title: Text('Title10')),
-          ListTile(title: Text('Title11')),
-          ListTile(title: Text('Title12')),
-          ListTile(title: Text('Title13')),
-          ListTile(title: Text('Title14')),
-          ListTile(title: Text('Title15')),
-          ListTile(title: Text('Title16')),
-          ListTile(title: Text('Title17')),
-          ListTile(title: Text('Title18')),
-          ListTile(title: Text('Title19')),
-        ],
+      child: Container(
+        color: Color.fromARGB(255,246,246,246),
+        child: Padding(
+          padding: EdgeInsets.only(
+            top: 20.0,
+            left: 10.0,
+            right: 10.0
+          ),
+          child: ListView.builder(
+            itemCount: items.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: BusiHomeItem(items),
+              );
+            },
+          ),
+        )
       )
     );
   }
