@@ -17,7 +17,6 @@ class BusiHomeItem extends StatelessWidget {
               margin: EdgeInsets.only(
                 bottom: 10.0
               ),
-              height: 264.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: Color.fromARGB(255,255,255,255),
@@ -94,13 +93,61 @@ class BusiHomeItem extends StatelessWidget {
                         )
                       ],
                     )
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 4.0,
+                      right: 4.0
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              '¥ ',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color.fromARGB(255,102,102,102),
+                                decoration: TextDecoration.lineThrough
+                              )
+                            ),
+                            Text(
+                              '109.9',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Color.fromARGB(255,102,102,102),
+                                decoration: TextDecoration.lineThrough
+                              )
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              '¥ ',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color.fromARGB(255,250,44,25)
+                              )
+                            ),
+                            Text(
+                              '109.9',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Color.fromARGB(255,250,44,25)
+                              )
+                            )
+                          ],
+                        )
+                      ],
+                    )
                   )
                 ]
               ),
             )
           ),
           Container(
-            height: 264.0,
             width: 10.0,
             color: Color.fromARGB(255,246,246,246)
           ),
@@ -109,7 +156,6 @@ class BusiHomeItem extends StatelessWidget {
               padding: EdgeInsets.only(
                 bottom: 10.0
               ),
-              height: 264.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: Color.fromARGB(255,255,255,255),
@@ -136,6 +182,55 @@ class BusiHomeItem extends StatelessWidget {
                         fontSize: 13,
                         color: Color.fromARGB(255,26,26,26)
                       ),
+                    )
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 4.0,
+                      right: 4.0
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              '¥ ',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color.fromARGB(255,102,102,102),
+                                decoration: TextDecoration.lineThrough
+                              )
+                            ),
+                            Text(
+                              '109.9',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Color.fromARGB(255,102,102,102),
+                                decoration: TextDecoration.lineThrough
+                              )
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              '¥ ',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Color.fromARGB(255,250,44,25)
+                              )
+                            ),
+                            Text(
+                              '109.9',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Color.fromARGB(255,250,44,25)
+                              )
+                            )
+                          ],
+                        )
+                      ],
                     )
                   ),
                   Padding(
