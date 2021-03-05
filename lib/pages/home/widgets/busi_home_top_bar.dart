@@ -21,7 +21,7 @@ class _BusiHomeTopBarState extends State<BusiHomeTopBar> {
             width: 40.0,
             height: 44.0,
             child: Icon(
-              IconData(0xe600, fontFamily: 'iconfont'),
+              IconData(0xe6c7, fontFamily: 'iconfont'),
               size: 15.0,
               color: Color.fromARGB(255,255,255,255),
             ),

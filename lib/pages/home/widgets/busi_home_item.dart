@@ -14,8 +14,12 @@ class BusiHomeItem extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
+              padding: EdgeInsets.only(
+                left: 10.0,
+                right: 5.0
+              ),
               margin: EdgeInsets.only(
-                bottom: 10.0
+                bottom: 20.0
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
@@ -146,15 +150,15 @@ class BusiHomeItem extends StatelessWidget {
                 ]
               ),
             )
-          ),
-          Container(
-            width: 10.0,
-            color: Color.fromARGB(255,246,246,246)
           ),
           Expanded(
             child: Container(
               padding: EdgeInsets.only(
-                bottom: 10.0
+                left: 5.0,
+                right: 10.0
+              ),
+              margin: EdgeInsets.only(
+                bottom: 20.0
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
@@ -285,7 +289,7 @@ class BusiHomeItem extends StatelessWidget {
                 ]
               ),
             )
-          ),
+          )
         ],
       );
   }
