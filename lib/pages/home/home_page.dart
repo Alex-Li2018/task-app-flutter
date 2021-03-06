@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               ), 
             ),
             SliverPersistentHeader( 
-              pinned: true, 
+              pinned: false, 
               floating: false, 
               delegate: _SliverAppBarDelegate( 
                 minHeight: 143.0, 
