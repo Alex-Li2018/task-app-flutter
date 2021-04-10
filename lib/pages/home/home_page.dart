@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import "package:task_app/pages/home/widgets/busi_home_top_bar.dart";
-import "package:task_app/pages/home/widgets/busi_home_swiper.dart";
 import "package:task_app/pages/home/widgets/busi_home_item.dart";
 
 class HomePage extends StatefulWidget {
@@ -23,28 +22,29 @@ class _HomePageState extends State<HomePage> {
         },
         child: CustomScrollView(
           slivers: <Widget>[
-            SliverPersistentHeader( 
-              pinned: true, 
-              floating: false, 
-              delegate: _SliverAppBarDelegate( 
-                minHeight: 40.0, 
-                maxHeight: 40.0, 
-                child: BusiHomeTopBar(), 
-              ), 
+            SliverAppBar(
+              pinned: true,
+              backgroundColor: Color.fromARGB(255,107,128,251),
+              expandedHeight: 220.0,
+              title: Text(
+                '柯明教育',
+                style: TextStyle(
+                  color: Color.fromARGB(255,255,255,255),
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w600,
+                )
+              ),
+              flexibleSpace: FlexibleSpaceBar(
+                background: BusiHomeTopBar(),
+              ),
             ),
-            SliverPersistentHeader( 
-              pinned: false, 
-              floating: false, 
-              delegate: _SliverAppBarDelegate( 
-                minHeight: 143.0, 
-                maxHeight: 143.0, 
-                child: BusiHomeSwiper(), 
-              ), 
-            ),
-            SliverList(
-              delegate: SliverChildBuilderDelegate((content, index) {
-                return BusiHomeItem(items);
-              }, childCount: items.length),
+            SliverPadding(
+              padding: EdgeInsets.only(top: 20.0),
+              sliver: SliverList(
+                delegate: SliverChildBuilderDelegate((content, index) {
+                  return BusiHomeItem(items);
+                }, childCount: items.length),
+              )
             )
           ],
         )

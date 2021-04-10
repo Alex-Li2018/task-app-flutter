@@ -31,8 +31,8 @@ class _BusiHomeTopBarState extends State<BusiHomeSwiper> {
             constraints: BoxConstraints.tight(Size(window.physicalSize.width, 110.0)),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(15.0),
-                bottomRight: Radius.circular(15.0)
+                bottomLeft: Radius.circular(30.0),
+                bottomRight: Radius.circular(30.0)
               ),
               gradient: LinearGradient(
                 // 渐变的色值数组

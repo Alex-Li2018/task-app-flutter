@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 // 或者通过传递一个 `options`来创建dio实例
 BaseOptions options = BaseOptions(
-  baseUrl: "http://www.task-api.top:7001/web/v1",
+  baseUrl: "https://www.task-api.top/app/v1/",
   connectTimeout: 5000,
   receiveTimeout: 3000,
 );
