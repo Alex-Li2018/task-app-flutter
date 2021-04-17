@@ -20,33 +20,39 @@ class _HomePageState extends State<HomePage> {
             
           });
         },
-        child: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              pinned: true,
-              backgroundColor: Color.fromARGB(255,107,128,251),
-              expandedHeight: 220.0,
-              title: Text(
-                '柯明教育',
-                style: TextStyle(
-                  color: Color.fromARGB(255,255,255,255),
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w600,
+        child: Container(
+          color: Color(0xfff3f4f5),
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverAppBar(
+                pinned: true,
+                backgroundColor: Color.fromARGB(255,107,128,251),
+                expandedHeight: 220.0,
+                title: Text(
+                  '柯明教育',
+                  style: TextStyle(
+                    color: Color.fromARGB(255,255,255,255),
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w600,
+                  )
+                ),
+                flexibleSpace: FlexibleSpaceBar(
+                  background: BusiHomeTopBar(),
+                ),
+              ),
+              SliverPadding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15.0,
+                  vertical: 20.0
+                ),
+                sliver: SliverList(
+                  delegate: SliverChildBuilderDelegate((content, index) {
+                    return BusiHomeItem(items);
+                  }, childCount: items.length),
                 )
-              ),
-              flexibleSpace: FlexibleSpaceBar(
-                background: BusiHomeTopBar(),
-              ),
-            ),
-            SliverPadding(
-              padding: EdgeInsets.only(top: 20.0),
-              sliver: SliverList(
-                delegate: SliverChildBuilderDelegate((content, index) {
-                  return BusiHomeItem(items);
-                }, childCount: items.length),
               )
-            )
-          ],
+            ],
+          ),
         )
       )
     );
