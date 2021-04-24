@@ -33,10 +33,13 @@ class _BusiHomeTopBarState extends State<BusiHomeTopBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Image.network(
+      child: banner != '' ? Image.network(
         banner,
         width: window.physicalSize.width,
         fit: BoxFit.fitWidth
+      ) 
+      : Container(
+        width: window.physicalSize.width,
       )
     );
   }

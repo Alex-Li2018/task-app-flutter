@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:task_app/pages/home/widgets/busi_home_top_bar.dart";
 import "package:task_app/pages/home/widgets/busi_home_item.dart";
+import "package:task_app/api/modules/home/index.dart";
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -9,7 +10,31 @@ class HomePage extends StatefulWidget {
 } 
 
 class _HomePageState extends State<HomePage> {
-  List items = List<String>.generate(1000, (i) => "Item $i");
+
+  List items = [];
+  var params = {
+    'page': 1,
+    'page_size': 10
+  };
+
+  String banner = '';
+
+  @override
+  void initState() {
+    super.initState();
+    // 请求数据
+    this._loadData();
+  }
+
+  _loadData() async {
+    var list = await getShopList(params);
+    print(list['data']);
+    list = list['data']['lists'];
+    if (list.length > 0) {
+      this.items = list;
+      print(this.items);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
